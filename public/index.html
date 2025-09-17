@@ -9,8 +9,7 @@
 <body>
   <div class="app">
     <header class="topbar">
-      <div class="logo">🔒 Secure Viewer</div>
-      <div class="note">Server‑backed — passwords are sent to the server for decryption (use HTTPS)</div>
+      <div class="note">सभी Passwords, Details को सुरक्षित जगह पर लिख लें या Save कर लें अन्यथा 24 घंटे में या अधिकतम 10 लॉगिन पर यह Permanently Delete हो जाएगा।</div>
     </header>
 
     <main class="panel">
@@ -27,7 +26,7 @@
         <div class="counter">Attempts: <strong id="attempts">0</strong> / <span id="maxAttempts">0</span></div>
       </div>
 
-      <div id="countdown" class="countdown">--:--:--</div>
+      <div id="countdown" class="countdown"></div>
 
       <div id="entries" class="entries">
         <div class="muted">Nothing unlocked yet</div>
@@ -35,7 +34,7 @@
     </main>
 
     <footer class="footer">
-      <small>Tip: Deploy with HTTPS. This server keeps the encrypted blob on the server and enforces global limits.</small>
+      
     </footer>
   </div>
 
