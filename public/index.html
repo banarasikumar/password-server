@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Secure Viewer — Light Mode</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="logo">🔒 Secure Viewer</div>
+      <div class="note">Server‑backed — passwords are sent to the server for decryption (use HTTPS)</div>
+    </header>
+
+    <main class="panel">
+      <h1 class="title">Unlock Data</h1>
+      <p class="subtitle">You have a limited number of global attempts. After the maximum attempts the data is deleted.</p>
+
+      <div class="formrow">
+        <input id="password" type="password" placeholder="Enter password" autocomplete="new-password" />
+        <button id="unlockBtn" class="unlock">Unlock</button>
+      </div>
+
+      <div class="meta">
+        <div class="info">Status: <strong id="status">idle</strong></div>
+        <div class="counter">Attempts: <strong id="attempts">0</strong> / <span id="maxAttempts">0</span></div>
+      </div>
+
+      <div id="countdown" class="countdown">--:--:--</div>
+
+      <div id="entries" class="entries">
+        <div class="muted">Nothing unlocked yet</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <small>Tip: Deploy with HTTPS. This server keeps the encrypted blob on the server and enforces global limits.</small>
+    </footer>
+  </div>
+
+<script src="/script.js"></script>
+</body>
+</html>
